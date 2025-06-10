@@ -173,6 +173,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     width: auto;
+    z-index: 10;
   }
 
   .nav-links {
