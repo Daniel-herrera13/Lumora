@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/imagenes/fondo5.png);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 30px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.profile-icon {
+    position: relative;
+}
+
+.profile-icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #00ff6a;
+    border: 2px solid #111;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+    
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 200px;
+}
+    
+.foto-usuario {
+    border: 5px solid #00C851;
+    border-radius: 50%;
+    padding: 5px;
+}
+    
+.foto-usuario img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+    
+.info-usuario .estado {
+    color: #00C851;
+    font-weight: bold;
+    font-size: 18px;
+}
+    
+.info-usuario h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+    
+.info-usuario p {
+    color: gray;
+    margin-bottom: 20px;
+}
+    
+.btn-editar {
+    background-color: #f2f2f252;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background-color: #e0e0e079;
+}
+
+.fade-in {
+    animation: fadeInDown 0.8s ease forwards;
+    opacity: 0;
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: rgba(255, 255, 255, 0.76);
+}
+      
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
