@@ -1,137 +1,195 @@
 @import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ===== Estilos Base: Mobile First ===== */
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url(imagenes/fondo2.png);
-    font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(imagenes/fondo2.png);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .navbar {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.123);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 16px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  position: relative;
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff6a;
+  border: 2px solid #111;
+  border-radius: 50%;
+}
+
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  transform: translateY(0);
+}
+
+.card {
+  background-color: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 10px 0 0 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.card p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.intro {
+  font-size: 40px;
+  color: white;
+  font-weight: 500;
+  margin: 100px 20px 20px;
+  font-family: "Ancizar Serif", serif;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeInDown 0.8s ease forwards;
+  opacity: 0;
+}
+
+h2 {
+  color: white;
+  font-size: 26px;
+}
+
+p {
+  font-size: 16px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== Pantallas grandes: tablets y computadoras ===== */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.123);
-    border-radius: 30px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
+    width: auto;
+  }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 16px;
-}
+  .nav-links {
+    flex-direction: row;
+    gap: 16px;
+  }
 
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-}
-
-.icon-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    margin-right: 16px;
-}
-
-.profile-icon {
-    position: relative;
-}
-
-.profile-icon img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-
-.status-dot {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 10px;
-    height: 10px;
-    background-color: #00ff6a;
-    border: 2px solid #111;
-    border-radius: 50%;
-}
-
-.catalogo {
-    display: flex;
+  .catalogo {
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
     transform: translateY(-30px);
-}
+    padding: 40px;
+  }
 
-.card {
-    background-color: transparent;
-    border-radius: 20px;
-    overflow: hidden;
+  .card {
     text-align: left;
     width: 350px;
-}
+  }
 
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-.card h2 {
-    margin: 10px 0 0 0;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.card p {
-    margin: 4px 0 0 0;
-    font-size: 14px;
-    color: #aaa;
-}
-
-.intro {
+  .intro {
     font-size: 60px;
-    color: white;
-    font-weight: 500;
     margin-top: 150px;
-    font-family: "Ancizar Serif", serif;
     margin-left: 220px;
-}
+    text-align: left;
+  }
 
-.fade-in {
-    animation: fadeInDown 0.8s ease forwards;
-    opacity: 0;
-}
-h2{
-    color: white; 
+  h2 {
     font-size: 32px;
-}
+  }
 
-p{
+  p {
     font-size: 18px;
-}
-      
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  }
 }
