@@ -1,0 +1,276 @@
+/* Fondo de la página listo para poner imagen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/fondo2.png); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ddd;
+}
+
+/* Navbar oficial estilo catálogo */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.123);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 90%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 16px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-10px);
+}
+
+.profile-icon {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+  transform: translateY(-10px);
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff6a;
+  border: 2px solid #111;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+/* Main catálogo */
+main { padding: 2rem; 
+    display: flex; 
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.catalogo {
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Tarjetas de negocios */
+.negocio {
+    background-image: url(../img/fondo-tarjeta.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    min-height: 400px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.negocio:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+}
+
+.negocio img {
+    width: 40%;
+    max-height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.negocio:hover img { transform: scale(1.04); }
+
+/* Info dentro de la tarjeta */
+.info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    gap: 0.8rem;
+}
+
+.info h3 { font-size: 1.9rem; color: #fff; margin: 0; }
+.info p { font-size: 1rem; color: #bdbdbd; margin: 0.5rem 0; }
+
+.info .apartado {
+    background: #4b0082;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem 0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: transform 0.2s, background 0.3s;
+}
+.info .apartado:hover { transform: scale(1.05); background: #6a0dad; }
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: #1f1b22;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #bbb;
+}
+.cerrar:hover { color: #fff; }
+
+/* Galería de imágenes del modal */
+.modal-imagenes {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+.modal-imagenes img {
+    height: 150px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.modal-imagenes img:hover { transform: scale(1.05); }
+
+.modal-apartados .apartado {
+    display: block;
+    background: #4b0082;
+    margin: 0.5rem 0;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .negocio { flex-direction: column; }
+    .negocio img { width: 100%; border-radius: 15px 15px 0 0; }
+}
+.profile-icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+    .profile-icon img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.foto-usuario img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+@media (min-width: 768px) {
+    .foto-usuario img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover; 
+    }
+}

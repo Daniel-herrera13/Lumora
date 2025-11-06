@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(../img/Inicio.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.123);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  margin: 20px auto;
+  width: 90%;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.icon-button:hover{
+    transform: translateY(-10px);
+}
+.profile-icon {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.profile-icon:hover {
+    transform: translateY(-10px);
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff6a;
+  border: 2px solid #111;
+  border-radius: 50%;
+}
+
+/* TEXTOS Y BOTÓN */
+.titulo {
+  color: white;
+  font-size: 36px;
+  margin-top: 80px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.descripcion {
+  color: white;
+  font-size: 18px;
+  max-width: 90%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.titulo2 {
+  color: white;
+  font-size: 28px;
+  margin-top: 60px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.btn-comenzar {
+  background-color: rgba(255, 255, 255, 0.185);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 40px;
+}
+
+.btn-comenzar:hover {
+  background-color: #ffffff65;
+}
+
+.fade-in {
+  animation: fadeInDown 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== Estilos para pantallas grandes (mínimo 768px) ===== */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 10;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .titulo {
+    font-size: 60px;
+    margin-top: 200px;
+    text-align: left;
+  }
+
+  .descripcion {
+    font-size: 20px;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .titulo2 {
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: left;
+  }
+
+  .btn-comenzar {
+    font-size: 20px;
+    margin-top: 60px;
+    transform: translateY(-40px);
+  }
+}
+.profile-icon img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+    .profile-icon img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.foto-usuario img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+@media (min-width: 768px) {
+    .foto-usuario img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover; 
+    }
+}
