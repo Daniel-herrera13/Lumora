@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="css/Usuario.css">
+    <link rel="icon" href="img/Logo.png">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="emprendedor.html">Soy emprendedor</a>
+            <a href="sobre_nosotros.html">Sobre nosotros</a>
+        </nav>
+        <div class="nav-icons">
+            <a href="Notificaciones.html"><button class="icon-button"><img src="img/bell.png" alt="Campanita" height="27px"></button></a>
+            <div class="profile-icon">
+                <a href="usuario-default.html"><img src="img/usuario-default.png" alt="Perfil"></a>
+                <span class="status-dot"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="fade-in">
+        <main>
+            <section class="perfil">
+                <div class="foto-usuario">
+                    <img id="foto-preview" src="img/usuario-default.png" alt="Foto Usuario">
+                </div>
+                <div class="info-usuario">
+                    <h1>Editar Perfil</h1>
+                    <form id="form-editar-perfil">
+                        <div class="form-group">
+                            <label for="foto-input">Cambiar Foto de Perfil</label>
+                            <input type="file" id="foto-input" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-input">Nombre</label>
+                            <input type="text" id="nombre-input" placeholder="Tu nombre">
+                        </div>
+                        <button type="submit" class="btn-editar">Guardar Cambios</button>
+                    </form>
+                    <div id="mensaje" class="message" style="margin-top: 20px;"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/javascript.editarperfil.js"></script>
+    <script src="js/javascript.navbar.js"></script>
+    <script src="js/javascript.logout.js"></script>
+</body>
+</html>

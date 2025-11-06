@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es"> <!--ESTE ES EL NEGOCIO PREMIUM PARA LOS NEGOCIOS PLAN LUMINOSO-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Luminoso</title>
+    <link rel="stylesheet" href="css/NegocioP1.css">
+    <link rel="icon" href="img/Logo.png">
+</head>
+<body>
+    <header class="navbar">
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="emprendedor.html">Soy emprendedor</a>
+      <a href="sobre_nosotros.html">Sobre nosotros</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="Notificaciones.html"><button class="icon-button"><img src="img/bell.png" alt="Campanita" height="27px"></button></a>
+      <div class="profile-menu">
+    <div class="profile-icon" id="profile-toggle">
+        <img src="img/usuario-default.png" alt="Perfil">
+        <span class="status-dot"></span>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu">
+        <a href="usuario-default.html" class="dropdown-item"> Mi Perfil</a>
+        <a href="login.html" class="dropdown-item">  Login</a>
+        <button id="logout-btn" class="dropdown-item logout-btn">🚪 Cerrar Sesión</button>
+    </div>
+</div>
+    </div>
+  </header>
+
+  <div class="fade-in">
+    <main>
+    <section class="perfil">
+      <div class="foto-usuario premium-frame">
+        <img src="img/usuario-default.png" alt="Foto Usuario">
+        <div class="premium-badge">Plan Luminoso</div>
+      </div>
+      <div class="info-usuario">
+        <span class="estado premium-status">Online</span>
+        <h1>Nombre Usuario <span class="crown-icon">👑</span></h1>
+        <p class="premium-tag">Negocio Premium</p>
+        <a href="editar.perfil.html" class="btn-editar premium-btn">Editar usuario</a>
+      </div>
+    </section>
+    
+    <!-- Sección de estadísticas premium -->
+    <section class="premium-stats">
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-icon">📊</div>
+          <div class="stat-value">2,300</div>
+          <div class="stat-label">Visitas al perfil</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-value">5</div>
+          <div class="stat-label">Calificación</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-value">8</div>
+          <div class="stat-label">Logros</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  </div>
+   <script src="js/javascript.usuario.js"></script>
+   <script src="js/javascript.navbar.js"></script>
+   <script src="js/javascript.logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Negocios | Lumora</title>
+<link rel="icon" href="img/Logo.png"> 
+<link rel="stylesheet" href="css/negocios-Style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <nav class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="emprendedor.html">Soy emprendedor</a>
+    <a href="sobre_nosotros.html">Sobre nosotros</a>
+  </nav>
+  <div class="nav-icons">
+    <a href="Notificaciones.html">
+      <button class="icon-button"><img src="img/bell.png" alt="Campanita" height="27px"></button>
+    </a>
+    <div class="profile-icon">
+      <a href="usuario-default.html"><img src="img/usuario-default.png" alt="Perfil"></a>
+      <span class="status-dot"></span>
+    </div>
+  </div>
+</header>
+
+<main>
+    <section class="catalogo" id="negocios-container"></section>
+</main>
+
+<div class="modal" id="modal-info">
+    <div class="modal-content">
+        <span class="cerrar" id="cerrar-modal">&times;</span>
+        <h3 id="modal-nombre"></h3>
+        <div id="modal-imagenes" class="modal-imagenes"></div>
+        <p id="modal-descripcion"></p>
+        <div id="modal-apartados" class="modal-apartados"></div>
+    </div>
+</div>
+
+<script src="js/negocios-Style.js"></script>
+<script src="js/javascript.navbar.js"></script>
+<script src="js/javascript.logout.js"></script>
+</body>
+</html>

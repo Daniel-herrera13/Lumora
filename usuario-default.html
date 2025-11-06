@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="css/Usuario.css">
+    <link rel="icon" href="img/Logo.png">
+</head>
+<body>
+    <header class="navbar">
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="emprendedor.html">Soy emprendedor</a>
+      <a href="sobre_nosotros.html">Sobre nosotros</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="Notificaciones.html"><button class="icon-button"><img src="img/bell.png" alt="Campanita" height="27px"></button></a>
+      <div class="profile-menu">
+    <div class="profile-icon" id="profile-toggle">
+        <img src="img/usuario-default.png" alt="Perfil">
+        <span class="status-dot"></span>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu">
+        <a href="usuario-default.html" class="dropdown-item"> Mi Perfil</a>
+        <a href="login.html" class="dropdown-item">  Login</a>
+        <button id="logout-btn" class="dropdown-item logout-btn">🚪 Cerrar Sesión</button>
+    </div>
+</div>
+    </div>
+  </header>
+
+  <div class="fade-in">
+    <main>
+    <section class="perfil">
+      <div class="foto-usuario">
+        <img src="img/usuario-default.png" alt="Foto Usuario">
+      </div>
+      <div class="info-usuario">
+        <span class="estado">Online</span>
+        <h1>Nombre Usuario</h1>
+        <p>Usuario</p>
+        <a href="editar.perfil.html" class="btn-editar">Editar usuario</a>
+      </div>
+    </section>
+  </main>
+  </div>
+   <script src="js/javascript.usuario.js"></script>
+   <script src="js/javascript.navbar.js"></script>
+   <script src="js/javascript.logout.js"></script>
+</body>
+</html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario para Emprendedores</title>
-    <link rel="icon" href="imagenes/logo.png">
-    <link rel="stylesheet" href="Formulario.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario para Emprendedores</title>
+  <link rel="icon" href="img/Logo.png">
+  <link rel="stylesheet" href="css/Formulario.css">
 </head>
 <body>
-    <header class="navbar">
+  <header class="navbar">
     <nav class="nav-links">
       <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
@@ -16,45 +16,59 @@
       <a href="sobre_nosotros.html">Sobre nosotros</a>
     </nav>
     <div class="nav-icons">
-      <a href="Notificaciones.html"><button class="icon-button"><img src="imagenes/bell.png" alt="Campanita" height="27px"></button></a>
+      <a href="Notificaciones.html"><button class="icon-button"><img src="img/bell.png" alt="Campanita" height="27px"></button></a>
       <div class="profile-icon">
-        <a href="usuario.html"><img src="imagenes/usuario.jpeg" alt="Perfil"></a>
+        <a href="usuario-default.html"><img src="img/usuario-default.png" alt="Perfil"></a>
         <span class="status-dot"></span>
       </div>
     </div>
   </header>
 
   <div class="fade-in">
-  <div class="container">
-    <h1>Llena tu solicitud para tu emprendimiento</h1>
-    <div class="form-grid">
-      <div class="form-group">
-        <label class="label1">Nombre del emprendimiento</label>
-        <div class="input-simulado"></div>
-        <label class="label2">Descripción</label>
-        <div class="textarea-simulado"></div>
-      </div>
-      <div class="form-group">
-        <label class="label1">Número de teléfono</label>
-        <div class="input-simulado"></div>
-        <label class="label2">Dirección</label>
-        <div class="textarea-simulado"></div>
-      </div>
-      <div class="form-group">
-        <label class="label1">Logo</label>
-        <div class="image-picker"></div>
-        <label class="label2">Imágenes</label>
-        <div class="image-picker"></div>
-      </div>
+    <div class="container">
+      <h1>Llena tu solicitud para tu emprendimiento</h1>
+
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="label1">Nombre del emprendimiento</label>
+            <input type="text" name="nombre_emprendimiento" required>
+
+            <label class="label2">Descripción</label>
+            <textarea name="descripcion" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="label1">Número de teléfono</label>
+            <input type="tel" name="telefono" required>
+
+            <label class="label2">Dirección</label>
+            <textarea name="direccion" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="label1">Logo</label>
+            <input type="file" name="logo" accept="image/*" required>
+
+            <label class="label2">Imágenes adicionales</label>
+            <input type="file" name="imagenes[]" accept="image/*" multiple>
+          </div>
+        </div>
+
+        <div class="container2">
+          <center>
+            <button type="button" class="btn-comenzar" onclick="location.href='emprendedor.html'">Regresar</button>
+            <button type="submit" class="btn-comenzar">Enviar solicitud</button>
+          </center>
+        </div>
+
+        <!-- Configuración adicional -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="gracias.html">
+      </form>
     </div>
   </div>
-
-  <div class="container2">
-    <center>
-        <button class="btn-comenzar" onclick="location.href='emprendedor.html'">Regresar</button>
-        <button class="btn-comenzar">Enviar solicitud</button>
-    </center>
-  </div>
-  </div>
+  <script src="js/javascript.navbar.js"></script>
+  <script src="js/javascript.logout.js"></script>
 </body>
 </html>
